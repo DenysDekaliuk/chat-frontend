@@ -19,7 +19,7 @@ import { useQuickCheckIn } from "./context/QuickCheckInContext";
 
 const AppContent = () => {
     const { showCheckInDialog, currentShip, confirmShipAssignment, isLoading, onClose } = useQuickCheckIn();
-    
+    console.log('This is vite API url', import.meta.env.VITE_API_URL);
     // Initialize ban notifications
     useBanNotifications();
     
