@@ -1,7 +1,9 @@
 import axios from "axios";
 
 export const api = axios.create({
-    baseURL: "http://145.223.121.13:3000/api"
+    baseURL: import.meta.env.API_URL 
+        ? `${import.meta.env.API_URL}/api`
+        : "http://localhost:3000/api"
 });
 // Add this temporarily to debug
 // Add JWT token to requests
