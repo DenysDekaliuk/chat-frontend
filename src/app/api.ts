@@ -1,11 +1,9 @@
 import axios from "axios";
 
 export const api = axios.create({
-    baseURL: import.meta.env.VITE_API_URL 
-        ? `${import.meta.env.VITE_API_URL}/api`
-        : "http://localhost:3000/api"
+    baseURL: "http://145.223.121.13:3000/api"
 });
-
+// Add this temporarily to debug
 // Add JWT token to requests
 api.interceptors.request.use((config) => {
     const token = localStorage.getItem('token');
